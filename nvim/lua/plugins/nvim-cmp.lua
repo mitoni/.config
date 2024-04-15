@@ -1,6 +1,7 @@
 return {
 	{
 		"hrsh7th/nvim-cmp",
+		event = "InsertEnter",
 		dependencies = {
 			"neovim/nvim-lspconfig",
 			"hrsh7th/cmp-nvim-lsp",
@@ -10,8 +11,8 @@ return {
 			"hrsh7th/nvim-cmp",
 
 			"L3MON4D3/LuaSnip",
-			"rafamadriz/friendly-snippets",
 			"saadparwaiz1/cmp_luasnip",
+			"rafamadriz/friendly-snippets",
 
 			"williamboman/mason-lspconfig.nvim",
 		},
@@ -24,6 +25,10 @@ return {
 			luasnip.config.setup()
 
 			cmp.setup({
+				completion = {
+					completeopt = "menu,menuone,preview,noselect",
+				},
+
 				snippet = {
 					expand = function(args)
 						luasnip.lsp_expand(args.body)
@@ -33,18 +38,19 @@ return {
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" },
-					{ name = "friendly" },
 				}, {
-					{ name = "buffer" },
+					-- { name = "buffer" },
+					{ name = "path" },
+					-- { name = "cmdline" },
 				}),
 
 				mapping = cmp.mapping.preset.insert({
-					["<C-j>"] = cmp.mapping.select_next_item(),
+					["<C-,>"] = cmp.mapping.select_next_item(),
 					["<C-k>"] = cmp.mapping.select_prev_item(),
 					["<CR>"] = cmp.mapping.confirm({
-						behavior = cmp.ConfirmBehavior.Replace,
 						select = true,
 					}),
+					["<C-Space>"] = cmp.mapping.complete(),
 				}),
 			})
 		end,

@@ -30,17 +30,17 @@ return {
 				desc = "Rename",
 			},
 			{
-				"<leader>de",
+				"<leader>p",
 				"<CMD>Lspsaga peek_type_definition<CR>",
 				desc = "Peek definition",
 			},
 			{
-				"<leader>ca",
+				"<leader>ic",
 				"<CMD>Lspsaga incoming_calls<CR>",
 				desc = "Incoming calls",
 			},
 			{
-				"<leader>cca",
+				"<leader>oc",
 				"<CMD>Lspsaga outgoing_calls<CR>",
 				desc = "Outgoing calls",
 			},

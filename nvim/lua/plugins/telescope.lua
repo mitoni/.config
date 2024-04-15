@@ -6,9 +6,9 @@ return {
 			return vim.fn.executable("make") == 1
 		end,
 
-		-- config = function()
-		-- 	require("telescope").load_extension("fzf")
-		-- end,
+		config = function()
+			require("telescope").load_extension("fzf")
+		end,
 	},
 
 	{
@@ -49,6 +49,13 @@ return {
 					require("telescope.builtin").help_tags({})
 				end,
 				desc = "Search diagnostics",
+			},
+			{
+				"<leader>sr",
+				function()
+					require("telescope.builtin").resume()
+				end,
+				desc = "Resume search",
 			},
 		},
 	},

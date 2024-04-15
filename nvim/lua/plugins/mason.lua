@@ -12,6 +12,10 @@ return {
 			local mason_lspconfig = require("mason-lspconfig")
 			local servers = mason_lspconfig.get_installed_servers()
 
+			mason_lspconfig.setup({
+				ensure_installed = { "clangd", "tsserver", "eslint", "gopls", "rust_analyzer" },
+			})
+
 			mason_lspconfig.setup_handlers({
 				function(server_name)
 					require("lspconfig")[server_name].setup({
