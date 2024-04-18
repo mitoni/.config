@@ -57,6 +57,13 @@ return {
 				end,
 				desc = "Resume search",
 			},
+			{
+				"gr",
+				function()
+					require("telescope.builtin").lsp_references()
+				end,
+				desc = "Goto References",
+			},
 		},
 	},
 }

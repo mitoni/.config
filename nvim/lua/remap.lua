@@ -32,6 +32,16 @@ vim.keymap.set("n", "<leader>wo", ":only<CR>")
 -- vim.keymap.set("v", "k", "<Up>", { noremap = true, silent = true })
 -- vim.keymap.set("v", "l", "<Right>", { noremap = true, silent = true })
 
+-- disable arrow keys
+vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
+vim.keymap.set("n", "<right>", '<cmd>echo "Use l to move!!"<CR>')
+vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')
+vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
+
 -- remap go to definition and declaration
 vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
+
+-- quickfix
+vim.keymap.set("n", "<C-j>", ":cnext<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-k>", ":cprev<CR>", { noremap = true, silent = true })
