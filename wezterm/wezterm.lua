@@ -5,6 +5,9 @@ local mux = wezterm.mux
 -- This table will hold the configuration.
 local config = {}
 
+config.default_prog = { "tmux" }
+config.default_cwd = "~/dev"
+
 -- In newer versions of wezterm, use the config_builder which will
 -- help provide clearer error messages
 if wezterm.config_builder then
@@ -41,7 +44,7 @@ config.font = wezterm.font_with_fallback({
 config.window_padding = {
 	left = 0,
 	right = 0,
-	-- top = 0,
+	top = 0,
 	bottom = 0,
 }
 config.enable_scroll_bar = false
@@ -50,41 +53,43 @@ config.use_resize_increments = true
 config.window_decorations = "RESIZE"
 --config.window_background_opacity = 0.95
 
+config.enable_tab_bar = false
+
 -- TabBar
 -- config.tab_bar_at_bottom = true -- this is needed if plugin is not used
 -- config.use_fancy_tab_bar = false -- this allows the color_scheme to style also tabs (w/o plugin)
-wezterm.plugin.require("https://github.com/nekowinston/wezterm-bar").apply_to_config(config, {
-	position = "top",
-	max_width = 32,
-	dividers = "slant_right", -- or "slant_left", "arrows", "rounded", false
-	indicator = {
-		leader = {
-			enabled = true,
-			off = " ",
-			on = " ",
-		},
-		mode = {
-			enabled = true,
-			names = {
-				resize_mode = "RESIZE",
-				copy_mode = "VISUAL",
-				search_mode = "SEARCH",
-			},
-		},
-	},
-	tabs = {
-		numerals = "arabic", -- or "roman"
-		pane_count = "superscript", -- or "subscript", false
-		brackets = {
-			active = { "", " ◉" },
-			inactive = { "", " ◯" },
-		},
-	},
-	clock = { -- note that this overrides the whole set_right_status
-		enabled = false,
-		format = "%H:%M", -- use https://wezfurlong.org/wezterm/config/lua/wezterm.time/Time/format.html
-	},
-})
+-- wezterm.plugin.require("https://github.com/nekowinston/wezterm-bar").apply_to_config(config, {
+-- 	position = "top",
+-- 	max_width = 32,
+-- 	dividers = "slant_right", -- or "slant_left", "arrows", "rounded", false
+-- 	indicator = {
+-- 		leader = {
+-- 			enabled = true,
+-- 			off = " ",
+-- 			on = " ",
+-- 		},
+-- 		mode = {
+-- 			enabled = true,
+-- 			names = {
+-- 				resize_mode = "RESIZE",
+-- 				copy_mode = "VISUAL",
+-- 				search_mode = "SEARCH",
+-- 			},
+-- 		},
+-- 	},
+-- 	tabs = {
+-- 		numerals = "arabic", -- or "roman"
+-- 		pane_count = "superscript", -- or "subscript", false
+-- 		brackets = {
+-- 			active = { "", " ◉" },
+-- 			inactive = { "", " ◯" },
+-- 		},
+-- 	},
+-- 	clock = { -- note that this overrides the whole set_right_status
+-- 		enabled = false,
+-- 		format = "%H:%M", -- use https://wezfurlong.org/wezterm/config/lua/wezterm.time/Time/format.html
+-- 	},
+-- })
 
 -- Every time a resize occurs, save dimensions in a file and recover those when wezterm is reopened.
 -- NB: multi-window is not supported. If a new window is spawned, any resize on any window will overwrite previous
