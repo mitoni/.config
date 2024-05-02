@@ -1,15 +1,15 @@
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# export ZSH="$HOME/.oh-my-zsh"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 
-ZSH_THEME="obraun"
+# ZSH_THEME="obraun"
 
 HIST_STAMPS="mm/dd/yyyy"
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+# plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -34,7 +34,7 @@ if [ -f '/Users/micheletonizzo/dev/google-cloud-sdk/path.zsh.inc' ]; then . '/Us
 if [ -f '/Users/micheletonizzo/dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/micheletonizzo/dev/google-cloud-sdk/completion.zsh.inc'; fi
 
 # Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
+# [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
 
 # bun completions
 [ -s "/Users/micheletonizzo/.bun/_bun" ] && source "/Users/micheletonizzo/.bun/_bun"
@@ -49,7 +49,7 @@ alias bombardier='$(go env GOPATH)/bin/bombardier'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS='--layout=reverse --exact'
 
-# Mac setup for pomo
+# mac setup for pomo
 alias work="timer 60m && terminal-notifier -message 'Pomodoro'\
         -title 'Work Timer is up! Take a Break 😊'\
         -appIcon '~/Pictures/pumpkin.png'\
@@ -60,8 +60,13 @@ alias rest="timer 10m && terminal-notifier -message 'Pomodoro'\
         -appIcon '~/Pictures/pumpkin.png'\
         -sound Crystal"
 
-# Scripts folder
+# scripts folder
 PATH="$PATH":"$HOME/.config/scripts/"
 
 # tmux sessionizer
 bindkey -s ^f "tmux-sessionizer\n"
+
+# starship config file location 
+export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
+
+eval "$(starship init zsh)"
