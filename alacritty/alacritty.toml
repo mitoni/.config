@@ -1,0 +1,17 @@
+import = [
+    "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+[window]
+opacity = 0.90
+blur = true
+decorations = "None"
+
+[font]
+normal = { family = "SF Mono Square", style = "Regular" }
+bold = { style = "Medium" }
+size = 14.0
+offset = { y = 2 }
+
+[mouse]
+hide_when_typing = true
