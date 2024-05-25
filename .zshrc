@@ -69,6 +69,9 @@ bindkey -s ^f "tmux-sessionizer\n"
 # starship config file location 
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 
+alias td="tmux detach"
+alias ta="tmux attach"
+
 # tmuxifier
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"

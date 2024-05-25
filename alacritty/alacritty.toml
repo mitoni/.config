@@ -9,7 +9,6 @@ decorations = "Buttonless"
 padding = { x = 3, y = 3 }
 
 [font]
-normal = { family = "SF Mono Square", style = "Regular" }
-bold = { style = "Bold" }
-size = 14.0
-offset = { y = 2 }
+normal = { family = "SauceCodePro Nerd Font", style = "Light" }
+bold = { style = "Medium" }
+size = 13.0
