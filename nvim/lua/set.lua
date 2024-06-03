@@ -36,6 +36,10 @@ vim.opt.colorcolumn = "80"
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
 
+vim.keymap.set("i", "<C-h>", function()
+	vim.lsp.buf.signature_help()
+end)
+
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking (copying) text",
