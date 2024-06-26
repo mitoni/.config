@@ -15,12 +15,12 @@ return {
 				require("conform").format({ async = true, lsp_fallback = true, range = range })
 			end, { range = true })
 
-			vim.api.nvim_create_autocmd("BufWritePre", {
-				pattern = "*",
-				callback = function(args)
-					require("conform").format({ bufnr = args.buf })
-				end,
-			})
+			-- vim.api.nvim_create_autocmd("BufWritePre", {
+			-- 	pattern = "*",
+			-- 	callback = function(args)
+			-- 		require("conform").format({ bufnr = args.buf })
+			-- 	end,
+			-- })
 
 			require("conform").setup({
 				formatters_by_ft = {
