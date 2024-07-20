@@ -12,3 +12,4 @@ padding = { x = 3, y = 3 }
 normal = { family = "SauceCodePro Nerd Font", style = "Light" }
 bold = { style = "Medium" }
 size = 13.0
+offset = { x = 0, y = 3 }

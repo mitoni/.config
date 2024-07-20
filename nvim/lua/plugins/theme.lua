@@ -7,7 +7,7 @@ return {
 		config = function()
 			local catppuccin = require("catppuccin")
 			catppuccin.setup({
-				flavour = "macchiato",
+				flavour = "auto",
 				transparent_background = true,
 				term_colors = true,
 			})
