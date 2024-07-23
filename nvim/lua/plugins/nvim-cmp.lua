@@ -29,6 +29,11 @@ return {
 					completeopt = "menu,menuone,preview,noselect",
 				},
 
+				window = {
+					completion = cmp.config.window.bordered(),
+					documentation = cmp.config.window.bordered(),
+				},
+
 				snippet = {
 					expand = function(args)
 						luasnip.lsp_expand(args.body)
@@ -36,11 +41,12 @@ return {
 				},
 
 				sources = cmp.config.sources({
+					{ name = "codeium" },
 					{ name = "nvim_lsp" },
-					{ name = "luasnip" },
+					{ name = "luasnip", max_item_count = 3 },
 				}, {
 					-- { name = "buffer" },
-					{ name = "path" },
+					{ name = "path", max_item_count = 3 },
 					-- { name = "cmdline" },
 				}),
 
