@@ -6,6 +6,7 @@ vim.g.maplocalleader = " "
 vim.opt.number = true
 vim.opt.signcolumn = "yes"
 vim.opt.relativenumber = true
+vim.opt.termguicolors = true
 
 -- Sync clipboard
 vim.o.clipboard = "unnamedplus"
