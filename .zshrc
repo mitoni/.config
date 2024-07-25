@@ -76,4 +76,9 @@ alias ta="tmux attach"
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
 
+# nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+. '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+
 eval "$(starship init zsh)"
