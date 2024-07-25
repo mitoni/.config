@@ -12,15 +12,15 @@ return {
 						["end"] = { args.line2, end_line:len() },
 					}
 				end
-				require("conform").format({ async = true, lsp_fallback = true, range = range })
+				require("conform").format({ async = true, lsp_format = "fallback", range = range })
 			end, { range = true })
 
-			-- vim.api.nvim_create_autocmd("BufWritePre", {
-			-- 	pattern = "*",
-			-- 	callback = function(args)
-			-- 		require("conform").format({ bufnr = args.buf })
-			-- 	end,
-			-- })
+			vim.api.nvim_create_autocmd("BufWritePre", {
+				pattern = "*",
+				callback = function(args)
+					require("conform").format({ bufnr = args.buf })
+				end,
+			})
 
 			require("conform").setup({
 				formatters_by_ft = {
@@ -33,6 +33,10 @@ return {
 					typescriptreact = { { "prettierd", "prettier" } },
 
 					json = { { "prettierd", "prettier" } },
+
+                    html = { { "prettierd", "prettier" } },
+                    css = { { "prettierd", "prettier" } },
+                    less = { { "prettierd", "prettier" } },
 
 					["*"] = {},
 					["_"] = {},
