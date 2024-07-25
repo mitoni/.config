@@ -5,6 +5,11 @@ return {
 		config = function()
 			local notify = require("notify")
 
+            notify.setup({
+                background_colour = "#1e1e2e",
+                stages = "fade_in_slide_out",
+            })
+
 			local filtered_message = { "No information available" }
 
 			-- Override notify function to filter out messages
