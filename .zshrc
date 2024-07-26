@@ -69,12 +69,19 @@ bindkey -s ^f "tmux-sessionizer\n"
 # starship config file location 
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 
+# tmux alias
 alias td="tmux detach"
 alias ta="tmux attach"
+alias tk="tmux kill-server"
 
-# tmuxifier
-export PATH="$HOME/.tmuxifier/bin:$PATH"
-eval "$(tmuxifier init -)"
+alias code="vim"
+function vim() {
+    if [[ $# -eq 0 ]]; then
+        nvim .
+    else
+        nvim "$@"
+    fi
+}
 
 # nix
 if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
