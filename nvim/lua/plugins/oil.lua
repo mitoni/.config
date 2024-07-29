@@ -15,12 +15,19 @@ return {
 				view_options = {
 					show_hidden = true,
 				},
+                watch_for_changes = true,
+                float = {
+                    padding = 2,
+                },
+                keymaps = {
+                    ["<Esc>"] = "actions.close",
+                },
 			})
 		end,
 		keys = {
 			{
 				"<leader>e",
-				"<CMD>Oil<CR>",
+				"<CMD>Oil --float<CR>",
 				desc = "Open Oil file explorer",
 			},
 		},
