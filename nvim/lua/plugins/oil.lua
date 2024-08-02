@@ -27,7 +27,9 @@ return {
 		keys = {
 			{
 				"<leader>e",
-				"<CMD>Oil --float<CR>",
+                function()
+                    require("oil").open()
+                end,
 				desc = "Open Oil file explorer",
 			},
 		},

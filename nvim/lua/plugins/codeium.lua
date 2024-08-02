@@ -2,14 +2,9 @@ return {
 	{
 		"Exafunction/codeium.vim",
 		event = "BufEnter",
+        config = function()
+            vim.g.codeium_no_map_tab = true
+            vim.keymap.set('i', '<C-y>', function () return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
+        end,
 	},
 }
-
--- {
--- 	"<leader>t",
--- 	function()
--- 		require("trouble").toggle()
--- 	end,
--- 	desc = "Trouble toggle quickfix",
--- },
---
