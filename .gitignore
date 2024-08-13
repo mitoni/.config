@@ -10,12 +10,6 @@
 !wezterm/
 !wezterm/*
 
-!skhd/
-!skhd/*
-
-!yabai/
-!yabai/*
-
 !tmux/
 !tmux/*
 
@@ -44,3 +38,6 @@
 
 !nix
 !nix/*
+
+!aerospace
+!aerospace/*
