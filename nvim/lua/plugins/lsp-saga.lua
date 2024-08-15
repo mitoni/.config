@@ -9,11 +9,11 @@ return {
 			require("lspsaga").setup({})
 		end,
 		keys = {
-			{
-				"<leader>ca",
-				"<CMD>Lspsaga code_action<CR>",
-				desc = "Code action",
-			},
+			-- {
+			-- 	"<leader>ca",
+			-- 	"<CMD>Lspsaga code_action<CR>",
+			-- 	desc = "Code action",
+			-- },
 			{
 				"<leader>d",
 				"<CMD>Lspsaga show_cursor_diagnostics<CR>",
