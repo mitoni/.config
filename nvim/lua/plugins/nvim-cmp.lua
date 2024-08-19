@@ -51,8 +51,8 @@ return {
 				}),
 
 				mapping = cmp.mapping.preset.insert({
-					["<C-,>"] = cmp.mapping.select_next_item(),
-					["<C-k>"] = cmp.mapping.select_prev_item(),
+					-- ["<C-j>"] = cmp.mapping.select_next_item(),
+					-- ["<C-k>"] = cmp.mapping.select_prev_item(),
 					["<CR>"] = cmp.mapping.confirm({
 						select = true,
 					}),

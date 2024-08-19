@@ -6,27 +6,28 @@ return {
 		},
 		keys = {
 			{
-				"<leader>ha",
+                "<C-h>",
 				function()
 					require("harpoon.mark").add_file()
+                    vim.notify("Added file to harpoon", vim.log.levels.INFO, { title = "Harpoon" })
 				end,
 			},
+            {
+                "<leader>h",
+                function()
+                    require("harpoon.ui").toggle_quick_menu()
+                end,
+            },
 			{
-				"<C-.>",
+				"<C-k>",
 				function()
 					require("harpoon.ui").nav_next()
 				end,
 			},
 			{
-				"<C-,>",
+				"<C-j>",
 				function()
 					require("harpoon.ui").nav_prev()
-				end,
-			},
-			{
-				"<leader>hh",
-				function()
-					require("harpoon.ui").toggle_quick_menu()
 				end,
 			},
 		},
