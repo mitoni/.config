@@ -1,6 +1,9 @@
 # Path to your oh-my-zsh installation.
 # export ZSH="$HOME/.oh-my-zsh"
 
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
 export XDG_CONFIG_HOME="$HOME/.config"
 
 # ZSH_THEME="obraun"
@@ -10,6 +13,10 @@ HIST_STAMPS="mm/dd/yyyy"
 # plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 # source $ZSH/oh-my-zsh.sh
+
+export GOPATH=$HOME/go
+export GOBIN=$HOME/go/bin
+export PATH=$PATH:$GOPATH/bin
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -83,12 +90,15 @@ function vim() {
     fi
 }
 
+# lazygit alias
+alias lg="lazygit"
+
 # nix
 if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-. '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-fi
+    . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+ fi
 
-defaults write -g InitialKeyRepeat -int 10
-defaults write -g KeyRepeat -int 1
+defaults write -g InitialKeyRepeat -int 11
+defaults write -g KeyRepeat -int 2
 
 eval "$(starship init zsh)"

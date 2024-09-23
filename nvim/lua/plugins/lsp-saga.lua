@@ -44,6 +44,11 @@ return {
 				"<CMD>Lspsaga outgoing_calls<CR>",
 				desc = "Outgoing calls",
 			},
+			{
+				"<leader>f",
+				"<CMD>Lspsaga finder<CR>",
+				desc = "Finder",
+			},
 		},
 	},
 }

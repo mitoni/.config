@@ -13,7 +13,7 @@ return {
 			local servers = mason_lspconfig.get_installed_servers()
 
 			mason_lspconfig.setup({
-				ensure_installed = { "clangd", "tsserver", "eslint", "gopls" },
+				ensure_installed = { "clangd", "tsserver", "eslint", "gopls", "pyright"  },
 			})
 
 			mason_lspconfig.setup_handlers({
