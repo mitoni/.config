@@ -49,11 +49,18 @@ return {
 				desc = "Search diagnostics",
 			},
 			{
+				"<leader>sw",
+				function()
+					require("telescope.builtin").grep_string()
+				end,
+				desc = "Search word",
+			},
+			{
 				"<leader>sh",
 				function()
 					require("telescope.builtin").help_tags({})
 				end,
-				desc = "Search diagnostics",
+				desc = "Help tags",
 			},
 			{
 				"<leader>sr",
@@ -63,7 +70,7 @@ return {
 				desc = "Resume search",
 			},
 			{
-				"gr",
+				"<leader>gr",
 				function()
 					require("telescope.builtin").lsp_references()
 				end,
