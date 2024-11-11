@@ -1,3 +1,9 @@
-font_family SauceCodePro Nerd Font
-font_size 14
-background_opacity 0.5
+font_size               12
+background_opacity      0.9
+background_blur         64
+mouse_hide_wait         1
+
+font_family      MonoLisa Nerd Font Mono Regular
+bold_font        MonoLisa Nerd Font Mono Bold
+italic_font      MonoLisa Nerd Font Mono Italic
+bold_italic_font MonoLisa Nerd Font Mono Bold Italic

@@ -42,10 +42,10 @@ return {
 
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
-					{ name = "luasnip", max_item_count = 3 },
+					{ name = "buffer", max_item_count = 10 },
 				}, {
-					-- { name = "buffer" },
-					{ name = "path", max_item_count = 3 },
+					{ name = "path", max_item_count = 5 },
+					{ name = "luasnip", max_item_count = 5 },
 					-- { name = "cmdline" },
 				}),
 
