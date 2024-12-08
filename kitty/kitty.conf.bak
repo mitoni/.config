@@ -3,7 +3,15 @@ background_opacity      0.9
 background_blur         64
 mouse_hide_wait         1
 
+bell_path none
+
 font_family      MonoLisa Nerd Font Mono Regular
 bold_font        MonoLisa Nerd Font Mono Bold
 italic_font      MonoLisa Nerd Font Mono Italic
 bold_italic_font MonoLisa Nerd Font Mono Bold Italic
+
+
+# BEGIN_KITTY_THEME
+# Ayu Mirage
+include current-theme.conf
+# END_KITTY_THEME
