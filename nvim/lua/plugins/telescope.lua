@@ -51,7 +51,7 @@ return {
 			{
 				"<leader>sw",
 				function()
-					require("telescope.builtin").grep_string()
+					require("telescope.builtin").grep_string({ vim.fn.input("Grep > ") })
 				end,
 				desc = "Search word",
 			},
