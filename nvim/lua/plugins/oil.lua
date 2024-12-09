@@ -20,7 +20,7 @@ return {
                     padding = 2,
                 },
                 keymaps = {
-                    ["<Esc>"] = "actions.close",
+                    -- ["<Esc>"] = "actions.close",
                 },
 			})
 		end,
